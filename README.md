@@ -46,6 +46,53 @@ $ npm run start:dev or start:debug
 $ npm run start:prod
 ```
 
+## To try
+```bash
+curl --request POST \
+  --url http://localhost:3000/world \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"continents": [
+		{
+			"name": "Américas",
+			"color": "green",
+			"countries": [
+				{
+					"name": "Brasil",
+					"isIdependent": true
+				},
+				{
+					"name": "Argentina",
+					"isIdependent": true
+				},
+				{
+					"name": "Colombia",
+					"isIdependent": true
+				}
+			]
+		},
+		{
+			"name": "Ásia",
+			"color": "red",
+			"countries": [
+				{
+					"name": "Japão",
+					"isIdependent": true
+				},
+				{
+					"name": "Indonésia",
+					"isIdependent": true
+				},
+				{
+					"name": "China",
+					"isIdependent": true
+				}
+			]
+		}
+	]
+}'
+```
+
 ## Test
 
 ```bash
