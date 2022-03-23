@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    container_name: poc-unit-of-work-db
+    restart: always
+    tty: true
+    volumes:
+      - ./.docker/dbdata:/var/lib/postgresql/data
+      - ./.docker/postgres:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_DB=unit-of-work
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123
+ 
+
+    
